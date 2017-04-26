@@ -3,7 +3,7 @@ Adonis Code Review
 
 The purpose of this session is to work in groups to use adonis in the R package vegan to compare the microbial community structures of various groups using PERMANOVA. We will go over the data tables and functions that will be used together. 
 
-By the of this code reivew you will be able to do basic analyses with adonis in vegan.
+By the end of this code reivew you will be able to do basic analyses with adonis in vegan.
 
 Time breakdown:
 

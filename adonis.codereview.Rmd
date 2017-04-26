@@ -8,12 +8,12 @@ Adonis Code Review
 
 The purpose of this session is to work in groups to use adonis in the R package vegan to compare the microbial community structures of various groups using PERMANOVA. We will go over the data tables and functions that will be used together. 
 
-By the of this code reivew you will be able to do basic analyses with adonis in vegan.
+By the end of this code reivew you will be able to do basic analyses with adonis in vegan.
 
 Time breakdown:
 
 10 mins of review of needed material
-30 mins of coding
+20 mins of coding
 20 mins of discussion of results
 
 You should absolutely have these in your pulled repo:
@@ -22,15 +22,16 @@ metadata.codereview.txt
 example.thetayc.0.03.lt.ave.dist
 read.dist.R
 
-With these you should be able to participate completely in the exercise at hand.
 
 Goals:
 
-Run an adonis comparing clinical metadata to the microbiome, excluding Response, Remission, TRTGR, without looking for interacitons.
+Run an adonis comparing clinical metadata to the microbiome (excluding Response, Remission, and TRTGR) without looking for interacitons.
 
-Run an adonis comparing Response, Remission, based on TRTGR
+Run an adonis looking for interactions between age, sex, and disease duration.
 
+Run an adonis comparing response based on TRTGR
 
+Run an adonis comparing remission based on TRTGR
 
 Teams:
 
