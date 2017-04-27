@@ -45,9 +45,28 @@ library(vegan)
 
 md <- read.table("metadata.codereview.txt", header =T, sep="\t")
 source("read.dist.R")
-dist.matrix <- read.dist("Jan400.screening.all.na.omit.cmd.thetayc.0.03.lt.ave.dist")
+dist.matrix <- read.dist("example.thetayc.0.03.lt.ave.dist")
 
+stopifnot(nrow(md)==nrow(dist.matrix)) 
 
+dist <- as.dist(dist.matrix)
+# Run an adonis comparing clinical metadata to the microbiome (excluding Response, Remission, and TRTGR) without looking for interacitons.
+
+set.seed(123)
+adonis(dist ~ AGE+SEX+ANTIBIO+CORT+DDUR+tissinvol+FLACT+FCALP+CRP+BOWSTRICT+STOOL_freq, md)
+
+# Run an adonis looking for interactions between age, sex, and disease duration.
+set.seed(123)
+adonis(dist ~ AGE*SEX*DDUR, md)
+ 
+# Run an adonis comparing response based on TRTGR
+
+set.seed(123)
+adonis(dist ~ RelRSPwk6, md, strata = md$TRTGR)
+# Run an adonis comparing remission based on TRTGR
+
+set.seed(123)
+adonis(dist ~ REMISSwk6, md, strata = md$TRTGR)
 ```
 
 
